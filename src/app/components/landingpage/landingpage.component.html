@@ -24,9 +24,9 @@
             </div>
         </div>
         <div class="row p-2 p-lg-5 pt-0 g-4 pb-5">
-            <div class="col-12 col-lg-4 text-center" *ngFor="let e of empower">
+            <div class="col-12 col-lg-4 text-center d-flex" *ngFor="let e of empower">
                 <div class="card rounded-4">
-                    <div class="card-body py-5">
+                    <div class="card-body py-5 flex-grow-1">
                         <div class="pb-4 text-white"><i class="{{e.iconClass}}"></i></div>
                         <h5 class="card-title text-white">{{e.cardTitle}}</h5>
                         <p class="card-text text-white">{{e.cardText}}</p>
@@ -46,9 +46,9 @@
             </div>
         </div>
         <div class="row p-2 p-lg-5 pt-0 g-4">
-            <div class="col-12 col-lg-4 text-center" *ngFor="let e of empower">
+            <div class="col-12 col-lg-4 text-center d-flex" *ngFor="let e of empower">
                 <div class="card rounded-4" id="card">
-                    <div class="card-body py-5">
+                    <div class="card-body py-5 flex-grow-1">
                         <div class="pb-4 text-dark"><i class="{{e.iconClass}}"></i></div>
                         <h5 class="card-title text-dark">{{e.cardTitle}}</h5>
                         <p class="card-text text-dark">{{e.cardText}}</p>
