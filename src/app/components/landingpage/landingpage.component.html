@@ -1,0 +1,90 @@
+<section id="home">
+    <div class="opac">
+        <div class="container-fluid">
+            <div class="row text-white p-3" id="first">
+                <div class="col-lg-6 col-12 text-start">
+                    <h1>Tailored IT Solutions to Streamline Operations</h1>
+                    <p>We understand the unique challenges faced by businesses in
+                        different sectors, and we
+                        provide tailored solutions to help you stay ahead of the game.</p>
+                    <a class="text-decoration-none text-white" href="#">Learn more &nbsp;<i
+                            class="fa fa-solid fa-arrow-down"></i></a>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="Empower">
+    <div class="container-fluid">
+        <div class="text-center text-white py-5 pt-lg-5 pb-lg-0">
+            <h1>Empowering Success with Ventois</h1>
+            <div class="w-75 p-3 m-auto">
+                <p class="m-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, officia dicta.</p>
+            </div>
+        </div>
+        <div class="row p-2 p-lg-5 pt-0 g-4 pb-5">
+            <div class="col-12 col-lg-4 text-center" *ngFor="let e of empower">
+                <div class="card rounded-4">
+                    <div class="card-body py-5">
+                        <div class="pb-4 text-white"><i class="{{e.iconClass}}"></i></div>
+                        <h5 class="card-title text-white">{{e.cardTitle}}</h5>
+                        <p class="card-text text-white">{{e.cardText}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="industries">
+    <div class="container-fluid">
+        <div class="text-center py-5 pt-lg-5 pb-lg-0">
+            <h1>Industries</h1>
+            <div class="w-75 m-auto">
+                <p class="m-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, officia dicta. Sit
+                    consequuntur hic repellendus blanditiis eius veniam incidunt deserunt eaque odio !</p>
+            </div>
+        </div>
+        <div class="row p-2 p-lg-5 pt-0 g-4">
+            <div class="col-12 col-lg-4 text-center" *ngFor="let e of empower">
+                <div class="card rounded-4" id="card">
+                    <div class="card-body py-5">
+                        <div class="pb-4 text-dark"><i class="{{e.iconClass}}"></i></div>
+                        <h5 class="card-title text-dark">{{e.cardTitle}}</h5>
+                        <p class="card-text text-dark">{{e.cardText}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="Discover">
+    <div class="container-fluid">
+        <div class="text-center py-3">
+            <h2>Discover the Latest in Career and Industry Trends</h2>
+        </div>
+        <div class="row p-2 g-4 p-lg-5">
+            <div class="col-12 col-lg-4 d-flex" *ngFor="let d of discover">
+                <div class="card" id="discover">
+                    <img src="{{d.img}}" class="card-img-top" alt="...">
+                    <div class="card-body flex-grow-1">
+                        <h5 class="card-title">{{d.cardTitle}}</h5>
+                        <p class="card-text">{{d.cardText}}</p>
+                        <p class="card-text"><small class="text-body-secondary">2024-07-02</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="card card2 col-lg-3 border-0">
+                        <img src="https://images.pexels.com/photos/2420585/pexels-photo-2420585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">How Cloud Computing Is Revolutionizing the IT Industry</h5>
+                            <p class="card-text">Cloud computing is revolutionizing the IT industry with
+                                benefits like scalability, cost-effectiveness, security, collaboration, and a
+                                competitive edge. It has become an essential part of any business strategy,
+                                enabling businesses to improve efficiency and productivity.</p>
+                            <p class="card-text"><small class="text-body-secondary">2024-07-02</small></p>
+                        </div>
+                    </div> -->
+    </div>
+</section>
