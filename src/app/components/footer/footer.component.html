@@ -1,21 +1,23 @@
 <footer>
-    <div class="main text-center bg-dark d-flex justify-content-center align-items-center p-5">
-        <div class="" >
+    <div class="main text-center bg-dark d-flex justify-content-center align-items-center p-5 pb-2">
+        <div class="">
             <img src="logo.png" width="225" alt="">
             <p class="text-secondary">Tailored IT Solutions</p>
         </div>
-        
         <div class="">
             <h4 class="text-white">Follow Us</h4>
-             <div class="d-inline-flex align-items-center">
+            <div class="d-inline-flex align-items-center">
                 <table [cellSpacing]="5">
-                    <tr  *ngFor="let s of social" >
+                    <tr *ngFor="let s of social">
                         <td><i class="{{s.icon}} text-white text-start p-2"></i></td>
-                        <td class="text-start"><a href="{{s.link}}" class="link-secondary" target="_blank">{{s.type}}</a></td>
-                        <!-- <td><i class="fa fa-arrow-up-right-from-square"></i></td> -->
+                        <td class="text-start"><a href="{{s.link}}" class="link-secondary"
+                                target="_blank">{{s.type}}</a></td>
                     </tr>
                 </table>
-             </div>
+            </div>
         </div>
+    </div>
+    <div class="copyright bg-dark text-center m-0">
+        <p class="text-secondary m-0 pb-5">© 2024 Trestellae Inc. All Rights Reserved.</p>
     </div>
 </footer>
