@@ -77,7 +77,31 @@ export class HeaderService {
       "cardText": "Renewable energy sources such as solar, wind, and hydroelectric power are shaping the future of energy sustainability. They offer environmentally friendly alternatives to fossil fuels, reducing carbon emissions and mitigating climate change impacts."
     }
             
-  ]
+  ];
+
+  socialMedia=  [
+    {
+      "type": "Facebook",
+      "link": "https://www.facebook.com/dummyprofile",
+      "icon": "fa-brands fa-facebook"
+    },
+    {
+      "type": "Twitter",
+      "link": "https://www.twitter.com/dummyprofile",
+      "icon": "fa-brands fa-x-twitter"
+    },
+    {
+      "type": "Instagram",
+      "link": "https://www.instagram.com/dummyprofile",
+      "icon": "fa-brands fa-instagram"
+    },
+    {
+      "type": "LinkedIn",
+      "link": "https://www.linkedin.com/in/dummyprofile",
+      "icon": "fa-brands fa-linkedin"
+    }
+  ];  
+  
   
 
   getMenuItems()
@@ -93,5 +117,10 @@ export class HeaderService {
   getDiscover()
   {
     return this.discover;
+  }
+
+  getSocial()
+  {
+    return this.socialMedia;
   }
 }
