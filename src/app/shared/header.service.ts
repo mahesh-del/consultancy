@@ -8,22 +8,12 @@ export class HeaderService {
   constructor() { }
   headerMenu=[
     {
-      "label":"Expertise"
+      "label":"Careers",
+      "route":"careers"
     },
     {
-      "label":"Solutions"
-    },
-    {
-      "label":"About Us"
-    },
-    {
-      "label":"Careers"
-    },
-    {
-      "label":"Blog"
-    },
-    {
-      "label":"Contact"
+      "label":"Contact",
+      "route":"contact"
     }
   ];
 
@@ -100,7 +90,32 @@ export class HeaderService {
       "link": "https://www.linkedin.com/in/dummyprofile",
       "icon": "fa-brands fa-linkedin"
     }
-  ];  
+  ];
+  
+  contact=
+  [
+    {
+      "type": "address",
+      "icon": "fa-house",
+      "text": "Street B3 MA 01545, United States"
+    },
+    {
+      "type": "phone",
+      "icon": "fa-phone",
+      "text": "+1 785-22-2914"
+    },
+    {
+      "type": "email",
+      "icon": "fa-envelope",
+      "text": "support@trestellae.com"
+    }
+  ];
+
+  getContact()
+  {
+    return this.contact;
+  }
+  
   
   
 
