@@ -1,11 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { HeaderService } from '../../shared/header.service';
 import { CommonModule } from '@angular/common';
+import { ContactComponent } from "../contact/contact.component";
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-landingpage',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ContactComponent,RouterOutlet],
   templateUrl: './landingpage.component.html',
   styleUrl: './landingpage.component.scss'
 })

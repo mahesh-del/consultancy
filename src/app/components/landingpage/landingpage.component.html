@@ -36,34 +36,12 @@
         </div>
     </div>
 </section>
-<section id="industries">
-    <div class="container-fluid">
-        <div class="text-center py-5 pt-lg-5 pb-lg-0">
-            <h1>Industries</h1>
-            <div class="w-75 m-auto">
-                <p class="m-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, officia dicta. Sit
-                    consequuntur hic repellendus blanditiis eius veniam incidunt deserunt eaque odio !</p>
-            </div>
-        </div>
-        <div class="row p-2 p-lg-5 pt-0 g-4">
-            <div class="col-12 col-lg-4 text-center d-flex" *ngFor="let e of empower">
-                <div class="card rounded-4" id="card">
-                    <div class="card-body py-5 flex-grow-1">
-                        <div class="pb-4 text-dark"><i class="{{e.iconClass}}"></i></div>
-                        <h5 class="card-title text-dark">{{e.cardTitle}}</h5>
-                        <p class="card-text text-dark">{{e.cardText}}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <section id="Discover">
     <div class="container-fluid">
         <div class="text-center py-3">
-            <h2>Discover the Latest in Career and Industry Trends</h2>
+            <h2 class="m-0">Discover the Latest in Career and Industry Trends</h2>
         </div>
-        <div class="row p-2 g-4 p-lg-5">
+        <div class="row p-2 g-4 p-lg-5 pt-lg-2">
             <div class="col-12 col-lg-4 d-flex" *ngFor="let d of discover">
                 <div class="card" id="discover">
                     <img src="{{d.img}}" class="card-img-top" alt="...">
@@ -77,3 +55,12 @@
         </div>
     </div>
 </section>
+<section id="contact">
+    <div class="container-fluid mt-3">
+        <div>
+            <app-contact></app-contact>
+        </div>
+        
+    </div>
+</section>
+<router-outlet></router-outlet>
