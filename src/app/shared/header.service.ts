@@ -8,6 +8,10 @@ export class HeaderService {
   constructor() { }
   headerMenu=[
     {
+      "label":"Home",
+      "route":""
+    },
+    {
       "label":"Business consulting",
       "route":"business-process-consulting"
     },
@@ -33,24 +37,9 @@ export class HeaderService {
       "cardText": "Customize your software development process with our agile methodologies."
     },
     {
-      "iconClass": "fa-solid fa-network-wired fs-1",
-      "cardTitle": "Network Infrastructure",
-      "cardText": "Optimize your network infrastructure with our advanced networking solutions."
-    },
-    {
-      "iconClass": "fa-solid fa-calendar-alt fs-1",
-      "cardTitle": "Event Management",
-      "cardText": "Plan and execute successful events with our comprehensive event management services."
-    },
-    {
       "iconClass": "fa-solid fa-briefcase fs-1",
       "cardTitle": "Professional Consulting",
       "cardText": "Gain strategic insights with our professional consulting services tailored to your industry."
-    },
-    {
-      "iconClass": "fa-solid fa-calendar-alt fs-1",
-      "cardTitle": "Event Management",
-      "cardText": "Plan and execute successful events with our comprehensive event management services."
     }
   ];
 
@@ -111,7 +100,7 @@ export class HeaderService {
     {
       "type": "email",
       "icon": "fa-envelope",
-      "text": "support@trestellae.com"
+      "text": "info@trestellae.com"
     }
   ];
 
