@@ -104,6 +104,62 @@ export class HeaderService {
     }
   ];
 
+  careers=[
+    {
+      "id": 1,
+      "title": "Senior Angular Developer",
+      "location": "Chennai",
+      "description": "Responsible for developing and managing web applications using Angular 10+.",
+      "employmentType": "Full-time",
+      "experience": "5+ years",
+      "requirements": [
+        "Experience with Angular 10+",
+        "Proficiency in HTML, CSS, and TypeScript",
+        "Knowledge of REST API and MySQL",
+        "Experience with front-end engineering and various JavaScript patterns",
+        "Ability to handle complete app development lifecycle independently"
+      ],
+      "datePosted": "2024-08-01"
+    },
+    {
+      "id": 2,
+      "title": "Full Stack Developer",
+      "location": "Bangalore",
+      "description": "Develop and maintain both front-end and back-end web applications.",
+      "employmentType": "Part-time",
+      "experience": "3+ years",
+      "requirements": [
+        "Proficiency in JavaScript, HTML, and CSS",
+        "Experience with Node.js and Express.js",
+        "Knowledge of database management with MongoDB",
+        "Familiarity with Angular or React",
+        "Strong problem-solving skills"
+      ],
+      "datePosted": "2024-08-05"
+    },
+    {
+      "id": 3,
+      "title": "UI/UX Designer",
+      "location": "Remote",
+      "description": "Design and improve user interfaces for web and mobile applications.",
+      "employmentType": "Contract",
+      "experience": "2+ years",
+      "requirements": [
+        "Experience with UI/UX design tools such as Figma or Adobe XD",
+        "Strong portfolio showcasing design skills",
+        "Understanding of user-centered design principles",
+        "Ability to work collaboratively with developers",
+        "Excellent communication skills"
+      ],
+      "datePosted": "2024-07-28"
+    }
+  ]
+  
+
+  getCareers()
+  {
+    return this.careers;
+  }
   getContact()
   {
     return this.contact;

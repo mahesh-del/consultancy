@@ -3,9 +3,27 @@
         <h3>Careers</h3>
         <p class="text-secondary">Join our team and lead the way in technological advancements.</p>
     </div>
-    <div class="second p-5  text-center">
+    <div class="second p-5 text-center" *ngIf="careers.length==0">
         <p>Our job openings are currently filled. Please come back later.</p>
         <img src="https://cdn.pixabay.com/photo/2020/07/24/10/06/man-5433469_1280.png" alt="" width="300">
+    </div>
+    <div class="careers p-5">
+        <div class="row g-4">
+            <div class="col-lg-4 col-12" *ngFor="let c of careers">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{c.title}}</h5>
+                        <hr>
+                        <p class="card-text text-body-secondary"><i class="fa-solid fa-location-dot pe-2"></i>{{c.location}}</p>
+                        <!-- <p class="card-text">{{c.description}}</p> -->
+                        <p class="card-text"><i class="fa-solid fa-calendar-days pe-2"></i>{{c.experience}}</p>
+                        <p class="card-text"><i class="fa-solid fa-person-walking-luggage pe-2"></i>{{c.employmentType}}</p>
+                        <a href="#" class="card-link">More Details<i class="fa-solid fa-arrow-up-right-from-square ps-2"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
     </div>
 
 
