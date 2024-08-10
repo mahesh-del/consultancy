@@ -187,4 +187,8 @@ export class HeaderService {
   {
     return this.socialMedia;
   }
+  getCareerByName(val:any)
+  {
+    return this.careers.find(item=>item.title==val)
+  }
 }

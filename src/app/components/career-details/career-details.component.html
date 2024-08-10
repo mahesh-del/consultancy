@@ -1,0 +1,68 @@
+<div class="main p-5">
+    <div *ngIf="career">
+        <h3>{{career.title}}</h3>
+        <hr>
+        <div class="row">
+            <div class="col-6">
+                <h6>Posted on</h6>
+                <p>{{career.datePosted}}</p>
+            </div>
+            <div class="col-6">
+                <h6>Job ID</h6>
+                <p>{{career.id}}</p>
+            </div>
+            <div class="col-6">
+                <h6>Location</h6>
+                <p>{{career.location}}</p>
+            </div>
+            <div class="col-6">
+                <h6>Employment Type</h6>
+                <p>{{career.employmentType}}</p>
+            </div>
+            <div class="col-6">
+                <h6>Experience</h6>
+                <p>{{career.experience}}</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-6">
+                <h4>Description</h4>
+                <p>{{career.description}}</p>
+                <h4>Requirements</h4>
+                <ul class="list-square">
+                    <li *ngFor="let c of career.requirements">{{ c }}</li>
+                </ul>
+            </div>
+            <div class="col-lg-6 apply p-4 p-lg-5">
+                <section class="apply">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+                        <input type="text" class="form-control" placeholder="Full Name" aria-label="fullname"
+                            aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-envelope"></i></span>
+                        <input type="email" class="form-control" placeholder="Your Email" aria-label="email"
+                            aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-phone"></i></span>
+                        <input type="tel" class="form-control" placeholder="Phone Number" aria-label="phone"
+                            aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-location"></i></span>
+                        <input type="tel" class="form-control" placeholder="Location" aria-label="location"
+                            aria-describedby="basic-addon1">
+                    </div>
+                    <label for="Resume" class="form-label">Resume</label>
+                    <div class="input-group mb-3">
+                        <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" placeholder="Username">
+                      </div>
+                    <button type="button" class="btn-primary btn w-100"><i class="fa-solid fa-bolt"></i> Apply Now</button>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
