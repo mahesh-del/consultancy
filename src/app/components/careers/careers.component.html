@@ -18,7 +18,7 @@
                         <!-- <p class="card-text">{{c.description}}</p> -->
                         <p class="card-text"><i class="fa-solid fa-calendar-days pe-2"></i>{{c.experience}}</p>
                         <p class="card-text"><i class="fa-solid fa-person-walking-luggage pe-2"></i>{{c.employmentType}}</p>
-                        <a href="#" class="card-link">More Details<i class="fa-solid fa-arrow-up-right-from-square ps-2"></i></a>
+                        <a [routerLink]="['/careers', c.title]" class="card-link">More Details<i class="fa-solid fa-arrow-up-right-from-square ps-2"></i></a>
                     </div>
                 </div>
                 
