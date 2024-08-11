@@ -1,4 +1,6 @@
-import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { inject, Injectable } from '@angular/core';
+import { map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -6,26 +8,35 @@ import { Injectable } from '@angular/core';
 export class HeaderService {
 
   constructor() { }
-  headerMenu=[
+
+  location = inject(HttpClient);
+  apiKey = "4a08ccf02e5c4741b52d91839defb00f"
+
+  getLocation(val: any) {
+    const link = `https://api.geoapify.com/v1/geocode/autocomplete?text=${val}&format=json&apiKey=${this.apiKey}`;
+    return this.location.get(link).pipe(
+      map((response :any) => response.results.map((results:any)=>results.formatted)));
+  }
+  headerMenu = [
     {
-      "label":"Home",
-      "route":""
+      "label": "Home",
+      "route": ""
     },
     {
-      "label":"Business consulting",
-      "route":"business-process-consulting"
+      "label": "Business consulting",
+      "route": "business-process-consulting"
     },
     {
-      "label":"Careers",
-      "route":"careers"
+      "label": "Careers",
+      "route": "careers"
     },
     {
-      "label":"Contact",
-      "route":"contact"
+      "label": "Contact",
+      "route": "contact"
     }
   ];
 
-  empowerList=[
+  empowerList = [
     {
       "iconClass": "fa-solid fa-cloud fs-1",
       "cardTitle": "Cloud Computing Solutions",
@@ -43,26 +54,26 @@ export class HeaderService {
     }
   ];
 
-  discover=[
+  discover = [
     {
-      "img":"https://images.pexels.com/photos/4549831/pexels-photo-4549831.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "img": "https://images.pexels.com/photos/4549831/pexels-photo-4549831.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "cardTitle": "How Cloud Computing Is Revolutionizing the IT Industry",
       "cardText": "Cloud computing is revolutionizing the IT industry with benefits like scalability, cost-effectiveness, security, collaboration, and a competitive edge. It has become an essential part of any business strategy, enabling businesses to improve efficiency and productivity."
     },
     {
-      "img":"https://images.pexels.com/photos/13194386/pexels-photo-13194386.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "img": "https://images.pexels.com/photos/13194386/pexels-photo-13194386.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "cardTitle": "The Impact of Artificial Intelligence in Healthcare",
       "cardText": "Artificial intelligence (AI) is transforming the healthcare industry by improving diagnostics accuracy, personalized treatment plans, and operational efficiency. It has the potential to revolutionize patient care, reducing costs and enhancing patient outcomes."
     },
-    { 
-      "img":"https://images.pexels.com/photos/9758237/pexels-photo-9758237.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    {
+      "img": "https://images.pexels.com/photos/9758237/pexels-photo-9758237.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "cardTitle": "The Future of Renewable Energy",
       "cardText": "Renewable energy sources such as solar, wind, and hydroelectric power are shaping the future of energy sustainability. They offer environmentally friendly alternatives to fossil fuels, reducing carbon emissions and mitigating climate change impacts."
     }
-            
+
   ];
 
-  socialMedia=  [
+  socialMedia = [
     {
       "type": "Facebook",
       "link": "https://www.facebook.com/dummyprofile",
@@ -84,27 +95,27 @@ export class HeaderService {
       "icon": "fa-brands fa-linkedin"
     }
   ];
-  
-  contact=
-  [
-    {
-      "type": "address",
-      "icon": "fa-house",
-      "text": "Street B3 MA 01545, United States"
-    },
-    {
-      "type": "phone",
-      "icon": "fa-phone",
-      "text": "+1 785-22-2914"
-    },
-    {
-      "type": "email",
-      "icon": "fa-envelope",
-      "text": "info@trestellae.com"
-    }
-  ];
 
-  careers=[
+  contact =
+    [
+      {
+        "type": "address",
+        "icon": "fa-house",
+        "text": "Street B3 MA 01545, United States"
+      },
+      {
+        "type": "phone",
+        "icon": "fa-phone",
+        "text": "+1 785-22-2914"
+      },
+      {
+        "type": "email",
+        "icon": "fa-envelope",
+        "text": "info@trestellae.com"
+      }
+    ];
+
+  careers = [
     {
       "id": 1,
       "title": "Senior Angular Developer",
@@ -154,41 +165,31 @@ export class HeaderService {
       "datePosted": "2024-07-28"
     }
   ]
-  
 
-  getCareers()
-  {
+
+  getCareers() {
     return this.careers;
   }
-  getContact()
-  {
+  getContact() {
     return this.contact;
   }
-  
-  
-  
 
-  getMenuItems()
-  {
+  getMenuItems() {
     return this.headerMenu
   }
 
-  getEmpower()
-  {
+  getEmpower() {
     return this.empowerList;
   }
 
-  getDiscover()
-  {
+  getDiscover() {
     return this.discover;
   }
 
-  getSocial()
-  {
+  getSocial() {
     return this.socialMedia;
   }
-  getCareerByName(val:any)
-  {
-    return this.careers.find(item=>item.title==val)
+  getCareerByName(val: any) {
+    return this.careers.find(item => item.title == val)
   }
 }
