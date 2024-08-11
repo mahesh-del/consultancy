@@ -8,11 +8,14 @@
             <h4 class="text-white">Follow Us</h4>
             <div class="d-inline-flex align-items-center">
                 <table [cellSpacing]="5">
-                    <tr *ngFor="let s of social">
-                        <td><i class="{{s.icon}} text-white text-start p-2"></i></td>
-                        <td class="text-start"><a href="{{s.link}}" class="link-secondary"
-                                target="_blank">{{s.type}}</a></td>
-                    </tr>
+                    <tbody>
+                        <tr *ngFor="let s of social">
+                            <td><i class="{{s.icon}} text-white text-start p-2"></i></td>
+                            <td class="text-start"><a href="{{s.link}}" class="link-secondary"
+                                    target="_blank">{{s.type}}</a></td>
+                        </tr>
+                    </tbody>
+                    
                 </table>
             </div>
         </div>

@@ -51,16 +51,29 @@
                         <input type="tel" class="form-control" placeholder="Phone Number" aria-label="phone"
                             aria-describedby="basic-addon1">
                     </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-location"></i></span>
-                        <input type="tel" class="form-control" placeholder="Location" aria-label="location"
-                            aria-describedby="basic-addon1">
+                    <div class="input-group mb-3" [formGroup]="locationControl">
+                        <input type="text" class="form-control" id="location" formControlName="location"
+                            placeholder="Location" />
+                            <div class="input-group-text" *ngIf="selectedL">
+                                <i class="fa-solid fa-circle-xmark" (click)="clearLocation()"></i>
+                              </div>
                     </div>
+                    <datalist id="list-timezone">
+                        <option *ngFor="let location of filteredLocations" [value]="location">{{location}}</option>
+                    </datalist>
+                    <ul *ngIf="filteredLocations.length > 0" class="list-group mt-2">
+                        <li *ngFor="let location of filteredLocations" class="list-group-item" (click)="selectLocation(location)">
+                            {{ location }}
+                        </li>
+                    </ul>
                     <label for="Resume" class="form-label">Resume</label>
                     <div class="input-group mb-3">
-                        <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" placeholder="Username">
-                      </div>
-                    <button type="button" class="btn-primary btn w-100"><i class="fa-solid fa-bolt"></i> Apply Now</button>
+                        <input type="file" class="form-control" id="inputGroupFile04"
+                            aria-describedby="inputGroupFileAddon04" aria-label="Upload" placeholder="Username">
+                    </div>
+                    <button type="submit" class="btn-primary btn w-100"><i
+                            class="fa-solid fa-bolt"></i> Apply
+                        Now</button>
                 </section>
             </div>
         </div>
