@@ -12,5 +12,5 @@ import { ContactComponent } from "./components/contact/contact.component";
     imports: [RouterOutlet, HeaderComponent, FooterComponent, ContactComponent]
 })
 export class AppComponent {
-  title = 'consultancy';
+  title = 'Trestellae';
 }
