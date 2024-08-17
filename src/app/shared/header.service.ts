@@ -15,7 +15,7 @@ export class HeaderService {
   getLocation(val: any) {
     const link = `https://api.geoapify.com/v1/geocode/autocomplete?text=${val}&format=json&apiKey=${this.apiKey}`;
     return this.location.get(link).pipe(
-      map((response :any) => response.results.map((results:any)=>results.formatted)));
+      map((response: any) => response.results.map((results: any) => results.formatted)));
   }
   headerMenu = [
     {
@@ -76,7 +76,7 @@ export class HeaderService {
   socialMedia = [
     {
       "type": "Facebook",
-      "link": "https://www.facebook.com/dummyprofile",
+      "link": "https://www.facebook.com/profile.php?id=61564602145955",
       "icon": "fa-brands fa-facebook"
     },
     {
@@ -101,12 +101,12 @@ export class HeaderService {
       {
         "type": "address",
         "icon": "fa-house",
-        "text": "Street B3 MA 01545, United States"
+        "text": "382 Boston Turnpike, Suite 203, Shrewsbury, MA 01545"
       },
       {
         "type": "phone",
         "icon": "fa-phone",
-        "text": "+1 785-22-2914"
+        "text": "+1 774-367-2729"
       },
       {
         "type": "email",
@@ -118,51 +118,27 @@ export class HeaderService {
   careers = [
     {
       "id": 1,
-      "title": "Senior Angular Developer",
-      "location": "Chennai",
-      "description": "Responsible for developing and managing web applications using Angular 10+.",
+      "title": "Data Engineer",
+      "location": "Shrewsbury-Remote",
+      "description": "Design and develop robust data pipelines to extract, transform, and load (ETL) data from various sources into data storage solutions.",
       "employmentType": "Full-time",
-      "experience": "5+ years",
+      "experience": "1+ years",
       "requirements": [
-        "Experience with Angular 10+",
-        "Proficiency in HTML, CSS, and TypeScript",
-        "Knowledge of REST API and MySQL",
-        "Experience with front-end engineering and various JavaScript patterns",
-        "Ability to handle complete app development lifecycle independently"
+        "Combine data from diverse sources, including databases, APIs, and external data feeds, into a unified system",
+        "Cleanse and preprocess data to ensure accuracy and consistency before it is used for analysis or reporting",
+        "Develop and manage database schemas, including relational and non-relational databases",
+        "Monitor and optimize database performance to ensure efficient data retrieval and storage",
+        "Create and maintain data warehouses to consolidate large volumes of data from different sources for analysis and reporting",
+        "Create and implement data models that represent business processes and data relationships effectively",
+        "Work with big data technologies such as Hadoop, Spark, and Kafka to handle large-scale data processing and real-time data streaming",
+        "Implement security measures to protect sensitive data and comply with relevant regulations and standards",
+        "Control access to data systems and ensure that only authorized users can access or manipulate data",
+        "Collaborate with data scientists to understand their data needs and ensure that data pipelines and infrastructure support their analytical requirements",
+        "Continuously monitor data systems for performance issues, errors, or failures",
+        "Maintain comprehensive documentation for data pipelines, database schemas, and data models",
+        "Create reports on data processing activities, system performance, and data quality for stakeholders"
       ],
       "datePosted": "2024-08-01"
-    },
-    {
-      "id": 2,
-      "title": "Full Stack Developer",
-      "location": "Bangalore",
-      "description": "Develop and maintain both front-end and back-end web applications.",
-      "employmentType": "Part-time",
-      "experience": "3+ years",
-      "requirements": [
-        "Proficiency in JavaScript, HTML, and CSS",
-        "Experience with Node.js and Express.js",
-        "Knowledge of database management with MongoDB",
-        "Familiarity with Angular or React",
-        "Strong problem-solving skills"
-      ],
-      "datePosted": "2024-08-05"
-    },
-    {
-      "id": 3,
-      "title": "UI/UX Designer",
-      "location": "Remote",
-      "description": "Design and improve user interfaces for web and mobile applications.",
-      "employmentType": "Contract",
-      "experience": "2+ years",
-      "requirements": [
-        "Experience with UI/UX design tools such as Figma or Adobe XD",
-        "Strong portfolio showcasing design skills",
-        "Understanding of user-centered design principles",
-        "Ability to work collaboratively with developers",
-        "Excellent communication skills"
-      ],
-      "datePosted": "2024-07-28"
     }
   ]
 

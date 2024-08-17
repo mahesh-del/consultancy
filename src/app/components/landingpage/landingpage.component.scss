@@ -4,6 +4,9 @@
     background-size: cover;
 }
 
+h1,p{
+    color: #1b6df1;
+}
 .opac {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
@@ -15,15 +18,15 @@
 }
 
 #Empower {
-    background-color: #00303d;
+    background-color: #f6f6f6;
 }
 
 .card:hover {
-    background-color: #005066;
+    background-color: #10418f;
 }
 
 .card {
-    background: #004052;
+    background: #1b6df1;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -36,8 +39,5 @@
 
 #card:hover {
     background-color: #a7d5e1;
-}
-#contact{
-    background: #ecfbff;
 }
 
