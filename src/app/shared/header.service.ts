@@ -86,7 +86,7 @@ export class HeaderService {
     },
     {
       "type": "Instagram",
-      "link": "https://www.instagram.com/dummyprofile",
+      "link": "https://www.instagram.com/trestellae/",
       "icon": "fa-brands fa-instagram"
     },
     {
