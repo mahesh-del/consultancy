@@ -81,7 +81,7 @@ export class HeaderService {
     },
     {
       "type": "Twitter",
-      "link": "https://www.twitter.com/dummyprofile",
+      "link": "https://x.com/trestellae",
       "icon": "fa-brands fa-x-twitter"
     },
     {
