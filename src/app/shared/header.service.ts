@@ -91,7 +91,7 @@ export class HeaderService {
     },
     {
       "type": "LinkedIn",
-      "link": "https://www.linkedin.com/in/dummyprofile",
+      "link": "https://www.linkedin.com/in/trestellae-inc-7b8881323/",
       "icon": "fa-brands fa-linkedin"
     }
   ];
