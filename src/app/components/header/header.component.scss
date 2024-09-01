@@ -1,13 +1,45 @@
-.navbar{
+.navbar {
     background-color: #1b6df1;
 }
+
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
     outline: none;
     box-shadow: none;
 }
-.navbar-toggler{
+::ng-deep .navbar-toggler-icon{
+    background-image: none;
+    height: 100%;
+}
+
+::ng-deep .navbar-toggler-icon::before{
+    transition: opacity 0.3s ease;
+    content: "\f0c9";  /* this is your text. You can also use UTF-8 character codes as I do here */
+    font-family: FontAwesome;
+}
+
+::ng-deep .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before{
+    transition: opacity 0.3s ease;
+    content: "\f00d";  /* this is your text. You can also use UTF-8 character codes as I do here */
+    font-family: FontAwesome;
+}
+
+::ng-deep .navbar-toggler-icon::after {
+    display: none; /* Hide ::after to avoid duplication */
+}
+.navbar-toggler {
     border: none;
     color: white;
+}
+
+.navbar-collapse.show {
+    li:hover {
+        list-style: initial;
+        color: white;
+        transition: padding-right 0.3s ease;
+        padding-right: 1rem;
+        content: '\2605';
+        direction: rtl;
+    }
 }

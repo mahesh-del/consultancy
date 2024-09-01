@@ -9,14 +9,6 @@ export class HeaderService {
 
   constructor() { }
 
-  location = inject(HttpClient);
-  apiKey = "4a08ccf02e5c4741b52d91839defb00f"
-
-  getLocation(val: any) {
-    const link = `https://api.geoapify.com/v1/geocode/autocomplete?text=${val}&format=json&apiKey=${this.apiKey}`;
-    return this.location.get(link).pipe(
-      map((response: any) => response.results.map((results: any) => results.formatted)));
-  }
   headerMenu = [
     {
       "label": "Home",
@@ -100,7 +92,7 @@ export class HeaderService {
     [
       {
         "type": "address",
-        "icon": "fa-house",
+        "icon": "fa-location",
         "text": "382 Boston Turnpike, Suite 203, Shrewsbury, MA 01545"
       },
       {

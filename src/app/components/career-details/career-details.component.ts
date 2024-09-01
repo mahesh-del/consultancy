@@ -35,30 +35,6 @@ export class CareerDetailsComponent implements OnInit {
   ngOnInit(): void {
     const productName = this.route.snapshot.paramMap.get('title');
     this.career = this.api.getCareerByName(productName);
-    this.locationControl.valueChanges
-      .pipe(
-        debounceTime(300),
-        distinctUntilChanged()
-      ).subscribe((value) => {
-        if (value.location && value.location.trim().length > 0) {
-          this.api.getLocation(value.location).subscribe((data) => {
-            this.filteredLocations = data;
-          });
-        } else {
-          this.filteredLocations = [];
-        }
-      });
-  }
-  selectLocation(val: string) {
-    this.selectedL = val;
-    this.locationControl.setValue({ location: val }, { emitEvent: false })
-    this.filteredLocations = []
-  }
-
-  clearLocation() {
-    this.selectedL = "";
-    this.filteredLocations = [];
-    this.locationControl.reset();
   }
 
 }
