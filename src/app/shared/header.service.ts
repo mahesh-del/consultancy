@@ -103,7 +103,7 @@ export class HeaderService {
       {
         "type": "email",
         "icon": "fa-envelope",
-        "text": "info@trestellae.com"
+        "text": "hr@trestellae.com"
       }
     ];
 
